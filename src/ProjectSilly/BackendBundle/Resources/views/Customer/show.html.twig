@@ -1,0 +1,61 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="modal-title">{{ "Customer"|trans ~ ": " ~ customer.name }} </h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="form-body">
+            <div class="col-md-12">
+                <div class="row">
+
+                    {% for child in show_form %}
+
+                        {% if child.vars.name != '_token' %}
+
+                            {% if(child.vars.attr.class is defined) %}
+                                {% set class = child.vars.attr.class %}
+                            {% else %}
+                                {% set class = '' %}
+                            {% endif %}
+
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+
+                                    <label class="control-label col-md-4">{{ child.vars.name|humanize|trans }}</label>
+
+                                    <div class="col-md-8 {{ class }}">
+
+                                        {% if(child.vars.choices is defined or child.vars.checked is defined) %}
+
+                                            {{ child.vars.data|trans }}
+
+                                        {% else %}
+
+                                            {{ child.vars.value|trans }}
+
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn default">{{ "Close"|trans }}</button>
+</div>

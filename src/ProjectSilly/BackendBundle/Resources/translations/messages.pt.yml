@@ -1,0 +1,176 @@
+Customer: Cliente
+Customers: Clientes
+New: Novo
+Save: Salvar
+Codification: Codificação
+Hydrometer: Hidrômetro
+Service one: Serviço 1
+Service two: Serviço 2
+Social tariff: Tarifa Social
+Expiration social tariff: Validade Tarifa Social
+Core: Núcleo
+Public place: Logradouro
+Building: Prédio
+Complement: Complemento
+Zipcode: Cep
+Home phone: Tel. Res.
+Cell phone: Tel. Celular
+Birthday date: Data Nascimento
+Water tank: Caixa D'Água
+Property relationship: Relação Imóvel
+Time occupation: Tempo Ocupação
+Amount residents: Quantidade Moradores
+Type economy: Tipo Economia
+Saving amount: Qtde. Economias
+Branch activity: Ramo de Atividade
+Areas: Áreas
+Number: Número
+owner: proprietário
+tenant: inquilino
+Area: Área
+Created at: Criado em
+Public places: Logradouros
+PublicPlaces: Logradouros
+Type public place: Tipo
+Type bed: Tipo Leito
+Type ride: Tipo Passeio
+airport: aeroporto
+avenue: avenida
+road: estrada
+street: rua
+alley: viela
+yard: jardim
+park: parque
+list: listar
+List: Listar
+Document: RG
+Social security: CPF
+Amount mature: Qtde. Adultos
+Amount children: Qtde. Crianças
+Select...: Selecione...
+Name: Nome
+industrial: industrial
+merchant: comercial
+residential: residencial
+public: pública
+Date link: Data Ligação
+Date register: Data Registro
+No data found: Nenhum dado encontrado
+Actions: Ações
+Filter: Filtro
+Filtrate: Filtrar
+Users: Usuários
+Update: Atualizar
+Close: Fechar
+Change password: Alterar Senha
+Logout: Sair
+Username: Usuário
+Next: Próximo
+Previous: Anterior
+Liberation: Liberação
+Property: Propriedade
+Eletric energy: Energia Elétrica
+Garbage collection: Coleta de Lixo
+Street lighting: Iluminação Pública
+Type housing: Tipo Habitação
+Contact leadership: Contato Liderança
+Social action: Ação Social
+Estimated links: Ligações Estimadas
+Seal link: Lacre Ligação
+Accepts retro: Aceita Retro
+Sewer: Esgoto
+Comments: Observações
+Ploy: Ofício
+consume zero with exchange: Consumo Zero com Troca
+consume zero without exchange: Consumo Zero sem Troca
+inactive with exchange: Inativo com Troca
+inactive without exchange: Inativo sem Troca
+Material: Material
+No name: Sem Nome
+Materials: Materiais
+Type: Tipo
+Description: Descrição
+Code: Código
+Accepts backhoe: Aceita Retroescavadeira
+Sense cadastral: Senso Cadastral
+Date sense cadastral: Data Senso Cadastral
+Sketches: Croquis
+Date sketches: Data Croquis
+Design: Dimensionamento
+Date design: Data Dimensionamento
+Date liberation: Data Liberação
+Date social action: Data Ação Social
+Creating rgi: Criação de RGIs
+Date creating rgi: Data Criação de RGIs
+Low signs: Baixa Signos
+Date low signs: Data Baixa Signos
+Date prevision start project: Data Previsão Inicio Obra
+Date prevision end project: Data Previsão Término Obra
+Filed documentation: Documentação Protocolada
+Unit: Unidade
+Login: Entrar
+Back: Voltar
+Add: Adicionar
+Quantity: Quantidade
+Cancel: Cancelar
+Delete: Excluir
+Delete Material: Excluir Material
+Unit measurement: Unidade de Medida
+Loading...: Carregando...
+cubic meter: M3
+meter: M
+unit: UN
+piece: PÇ
+Date application: Data Aplicação
+
+new link: Instalação Nova
+consume zero with exchange: Consumo Zero com Troca
+consume zero without exchange: Consumo Zero sem Troca
+inactive with exchange: Inativo com Troca
+inactive without exchange: Inativo sem Troca
+
+1: Sim
+0: Não
+
+# Filters
+
+ProjectSilly\CoreBundle\Entity\Material.description: Descrição
+ProjectSilly\CoreBundle\Entity\Material.code: Código
+ProjectSilly\CoreBundle\Entity\Material.id: Id
+
+ProjectSilly\UserBundle\Entity\User.id: Id
+ProjectSilly\UserBundle\Entity\User.name: Nome
+ProjectSilly\UserBundle\Entity\User.username: Usuário
+ProjectSilly\UserBundle\Entity\User.email: Email
+
+ProjectSilly\CoreBundle\Entity\Customer.id: Id
+ProjectSilly\CoreBundle\Entity\Customer.publicPlace: Logradouro
+ProjectSilly\CoreBundle\Entity\Customer.hydrometer: Hidrômetro
+ProjectSilly\CoreBundle\Entity\Customer.socialSecurity: CPF
+ProjectSilly\CoreBundle\Entity\Customer.rgi: RGI
+ProjectSilly\CoreBundle\Entity\Customer.name: Nome
+
+ProjectSilly\CoreBundle\Entity\Area.id: Id
+ProjectSilly\CoreBundle\Entity\Area.name: Nome
+
+ProjectSilly\CoreBundle\Entity\PublicPlace.id: Id
+ProjectSilly\CoreBundle\Entity\PublicPlace.publicPlace: Logradouro
+ProjectSilly\CoreBundle\Entity\PublicPlace.area: Área
+
+
+# Messages
+
+Customer %name% created.: Cliente %name% criado.
+Customer %name% updated.: Cliente %name% atualizado.
+Customer %name% excluded.: Cliente %name% excluído.
+Customer %name% not excluded. Contact Administrator.: Cliente %name% não foi excluído. Contate o administrador.
+
+Area %name% created.: Área %name% criada.
+Area %name% updated.: Área %name% atualizada.
+Area %name% excluded.: Área %name% excluída.
+Area %name% not excluded. Contact Administrator.: Área %name% não foi excluída. Contate o administrador.
+
+PublicPlace %name% created.: Logradouro %name% criado.
+PublicPlace %name% updated.: Logradouro %name% atualizado.
+PublicPlace %name% excluded.: Logradouro %name% excluído.
+PublicPlace %name% not excluded. Contact Administrator.: Logradouro %name% não foi excluído. Contate o administrador.

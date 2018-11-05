@@ -1,0 +1,306 @@
+{% extends '::content.html.twig' %}
+
+
+{% block contentTitle %}{{ "Customer"|trans }}{% endblock %}
+    {% block contentBody %}
+
+        <div class="portlet box blue-hoki">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-plus"></i>{{ "New"|trans }}
+                </div>
+            </div>
+            <div class="portlet-body form">
+                {{ form_start(form, {'attr':{'class':'customForm horizontal-form'}}) }}
+
+                <div class="form-body">
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group {% if form.codification.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.codification,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.codification) }}
+                                {{ form_errors(form.codification) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.rgi.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.rgi,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.rgi) }}
+                                {{ form_errors(form.rgi) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.tl.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.tl,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.tl) }}
+                                {{ form_errors(form.tl) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="form-group {% if form.hydrometer.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.hydrometer,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.hydrometer) }}
+                                {{ form_errors(form.hydrometer) }}
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="form-group {% if form.sealLink.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.sealLink,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.sealLink) }}
+                                {{ form_errors(form.sealLink) }}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="form-group {% if form.serviceOne.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.serviceOne,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.serviceOne) }}
+                                {{ form_errors(form.serviceOne) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                                <div class="form-group {% if form.serviceTwo.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.serviceTwo,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.serviceTwo) }}
+                                {{ form_errors(form.serviceTwo) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group {% if form.socialTariff.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.socialTariff,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.socialTariff) }}
+                                {{ form_errors(form.socialTariff) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group {% if form.expirationSocialTariff.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.expirationSocialTariff,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.expirationSocialTariff) }}
+                                {{ form_errors(form.expirationSocialTariff) }}
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group {% if form.publicPlace.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.publicPlace,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.publicPlace) }}
+                                {{ form_errors(form.publicPlace) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.number.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.number,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.number) }}
+                                {{ form_errors(form.number) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.complement.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.complement,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.complement) }}
+                                {{ form_errors(form.complement) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.zipcode.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.zipcode,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.zipcode) }}
+                                {{ form_errors(form.zipcode) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.homePhone.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.homePhone,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.homePhone) }}
+                                {{ form_errors(form.homePhone) }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.cellPhone.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.cellPhone,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.cellPhone) }}
+                                {{ form_errors(form.cellPhone) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group {% if form.birthdayDate.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.birthdayDate,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.birthdayDate) }}
+                                {{ form_errors(form.birthdayDate) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group {% if form.name.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.name,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.name) }}
+                                {{ form_errors(form.name) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.document.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.document,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.document) }}
+                                {{ form_errors(form.document) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.socialSecurity.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.socialSecurity,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.socialSecurity) }}
+                                {{ form_errors(form.socialSecurity) }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.email.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.email,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.email) }}
+                                {{ form_errors(form.email) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.propertyRelationship.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.propertyRelationship,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.propertyRelationship) }}
+                                {{ form_errors(form.propertyRelationship) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.timeOccupation.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.timeOccupation,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.timeOccupation) }}
+                                <span class="help">meses</span>
+                                {{ form_errors(form.timeOccupation) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.amountMature.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.amountMature,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.amountMature) }}
+                                {{ form_errors(form.amountMature) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.amountChildren.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.amountChildren,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.amountChildren) }}
+                                {{ form_errors(form.amountChildren) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.typeEconomy.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.typeEconomy,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.typeEconomy) }}
+                                {{ form_errors(form.typeEconomy) }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.savingAmount.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.savingAmount,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.savingAmount) }}
+                                {{ form_errors(form.savingAmount) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.branchActivity.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.branchActivity,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.branchActivity) }}
+                                {{ form_errors(form.branchActivity) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.waterTank.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.waterTank,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.waterTank) }}
+                                {{ form_errors(form.waterTank) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.dateLink.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.dateLink,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.dateLink) }}
+                                {{ form_errors(form.dateLink) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group {% if form.dateRegister.vars.errors|length > 0 %}has-error{% endif %}">
+                                {{ form_label(form.dateRegister,'' ,{ 'label_attr': {'class': 'control-label'} }) }}
+                                {{ form_widget(form.dateRegister) }}
+                                {{ form_errors(form.dateRegister) }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn blue-hoki">{{ "Save" | trans }}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+
+    {% endblock %}

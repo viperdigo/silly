@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block pageCss %}
+    <link rel="stylesheet" href="{{ asset('bundles/backend/metronic/assets/admin/pages/css/login3.css') }}"/>
+{% endblock %}
+
+{% block bodyClass %}login{% endblock %}
+{% block body %}
+
+        {#{% if app.request.hasPreviousSession %}#}
+            {#{% for type, messages in app.session.flashbag.all() %}#}
+                {#{% for message in messages %}#}
+                    {#<div class="alert alert-{{ type }}">#}
+                        {#<button class="close" data-close="alert"></button>#}
+                        {#{{ message }}#}
+                    {#</div>#}
+                {#{% endfor %}#}
+            {#{% endfor %}#}
+        {#{% endif %}#}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+
+    {% block footScripts %}{% endblock %}
+
+{% endblock %}

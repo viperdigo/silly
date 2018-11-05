@@ -1,0 +1,17 @@
+imports:
+    - { resource: config.yml }
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: info
+            handler:      nested
+        nested:
+            type:  stream
+            path:  %kernel.logs_dir%/%kernel.environment%.log
+            level: info
+
+parameters:
+    router.request_context.host: silly-staging.com
+    router.request_context.scheme: http            

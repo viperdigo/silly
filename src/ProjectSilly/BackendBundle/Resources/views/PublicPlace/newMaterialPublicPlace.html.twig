@@ -1,0 +1,98 @@
+{% extends '::content.html.twig' %}
+
+
+{% block contentTitle %}{{ "Associar Material"|trans }}{% endblock %}
+    {% block contentBody %}
+
+        <div class="portlet box blue-hoki">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-plus"></i>{{ "Public place"|trans }}{{ ": " ~ publicPlace.publicPlace }}
+                </div>
+            </div>
+            <div class="portlet-body form">
+                {{ form_start(form) }}
+
+                <input type="hidden" value="{{ app.request.get('id') }}">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% for child in form %}
+                                {{ form_row(child) }}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-offset-9 col-md-12">
+                                    <button type="submit" class="btn blue-hoki">{{ "Add" | trans }}</button>
+                                    <a class="btn default" href="{{ path('public_place') }}">{{ "Back"|trans }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="portlet-body custom-table">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>{{ "Material"|trans }}</th>
+                                <th>{{ "Quantity"|trans }}</th>
+                                <th>{{ "Unit measurement"|trans }}</th>
+                                <th>{{ "Date application"|trans }}</th>
+                                <th style="min-width: 120px; max-width: 120px;">{{ "Actions"|trans }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if publicPlace.materials is empty %}
+                                <tr>
+                                    <td colspan="100%" align="center">{{ "No data found"|trans }}</td>
+                                </tr>
+                            {% else %}
+                                {% for material in publicPlace.materials %}
+                                    <tr class="odd gradeX">
+                                        <td>{{ material.material.description }}</td>
+                                        <td>{{ material.quantity }}</td>
+                                        <td>{{ material.unitMeasurement|trans }}</td>
+                                        <td>{{ material.dateApplication|date('d/m/Y') }}</td>
+                                        <td>
+                                            <a title="{{ "Delete"|trans }}"
+                                               class="btn btn-xs red btn-delete"
+                                               data-toggle="modal"
+                                               data-id="{{ material.id }}"
+                                               data-name="{{ material.material.description }}"
+                                               data-href="{{ path('material_public_place_delete',{'id':material.id, 'publicPlaceId':publicPlace.id}) }}">
+                                                <i class="fa fa-close"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        {# Modal Delete #}
+        {% include 'BackendBundle:PublicPlace:deleteMaterial.html.twig' %}
+
+    {% endblock %}

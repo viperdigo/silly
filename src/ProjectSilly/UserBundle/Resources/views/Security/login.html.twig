@@ -1,0 +1,65 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+
+
+
+    <div class="logo">
+        <a href="{{ path('home') }}">
+            <img src="{{ asset('bundles/backend/metronic/assets/admin/layout4/img/logo-big.png') }}" alt=""/>
+        </a>
+    </div>
+    <div class="menu-toggler sidebar-toggler">
+    </div>
+    <div class="content">
+        <form class="login-form" action="{{ path("fos_user_security_check") }}" method="post">
+            <h3 class="form-title">Login</h3>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+
+            {% if error %}
+                <div class="alert alert-danger">
+                    <span>{{ error.messageKey|trans(error.messageData, 'security') }}</span>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9"
+                       for="username">{{ 'security.login.username'|trans }}</label>
+
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input class="form-control placeholder-no-fix" type="text" id="username" name="_username"
+                           value="{{ last_username }}" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9"
+                       for="password">{{ 'security.login.password'|trans }}</label>
+
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input placeholder="{{ "password"|trans }}" class="form-control placeholder-no-fix" autocomplete="off"
+                           type="password" id="password" name="_password" />
+                </div>
+            </div>
+            <div class="form-actions">
+                <label class="checkbox"></label>
+                <button type="submit" class="btn green-haze pull-right">
+                    Login <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>
+            {#<div>#}
+                {#<br>#}
+                {#<p>#}
+                    {#{{ "Don't have a user yet?"|trans }} <a id="register-btn" href="{{ path("fos_user_registration_register") }}">#}
+                        {#{{ "Create a user"|trans }} </a>#}
+                {#</p>#}
+            {#</div>#}
+
+        </form>
+
+    </div>
+
+
+{% endblock fos_user_content %}
